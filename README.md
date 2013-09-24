@@ -28,3 +28,6 @@ This project contains both the AS3 part of the PacDriveNativeExtension and a fle
 this will build the Ane and Compile the demo.
 
 All FlashBuilder-errors should be gone now
+
+
+( at the moment the code is still in the Alpha-fase )
