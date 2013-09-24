@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   applicationComplete="applicationCompleteHandler(event)">
+	<s:layout>
+		<s:VerticalLayout paddingBottom="10" paddingLeft="10" paddingRight="10" paddingTop="10"/>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			import nl.gepatto.ane.PacDriveEvent;
+			import nl.gepatto.ane.PacDriveExtension;
+			
+			private var ext:PacDriveExtension;
+			private var ledState:uint = 0;
+			private var flashtimer:Timer;
+			
+			protected function applicationCompleteHandler(event:FlexEvent):void
+			{
+				ext = new PacDriveExtension();
+				ext.setLedState(0,0,ledState);
+				ext.addEventListener(PacDriveEvent.DEVICE_REMOVED, handleDeviceChange);
+				ext.addEventListener(PacDriveEvent.DEVICE_ATTACHED, handleDeviceChange);
+			}
+			
+			protected function clickHandler(event:MouseEvent):void
+			{
+				ledState = ledState==0?1:0;
+				outputField.text = ext.setLedState(0,0,ledState);
+			}
+			
+			protected function deviceHandler(event:MouseEvent):void
+			{
+				var devType :String = ext.getDeviceType(0);
+				outputField.text = "device 0: " + devType;
+			}
+			
+			protected function getDevicePath(event:MouseEvent):void{
+				outputField.text = ext.getDevicePath(0);
+			}
+			
+			protected function getSerial(event:MouseEvent):void{
+				outputField.text = ext.getSerialNumber(0);
+			}
+			
+			protected function getVendor(event:MouseEvent):void{
+				outputField.text = ext.getVendorName(0);
+			}
+			
+			protected function getProduct(event:MouseEvent):void{
+				outputField.text = ext.getProductName(0);
+			}
+			
+			protected function flashLeds(event:MouseEvent):void{
+				resetTimer();
+				flashtimer = new Timer(50,20);
+				flashtimer.addEventListener(TimerEvent.TIMER, onTimer);
+				flashtimer.reset();
+				flashtimer.start();
+			}
+			
+			private function resetTimer():void{
+				if(flashtimer!=null){
+					flashtimer.stop()
+					flashtimer.removeEventListener(TimerEvent.TIMER, onTimer);
+					flashtimer = null;
+				}
+			}
+			
+			protected function onTimer(event:TimerEvent):void
+			{
+				ledState = ledState==0?1:0;
+				ext.setLedState(0,0,ledState);
+			}
+			
+			protected function handleDeviceChange(event:Event):void
+			{			
+				outputField.text = "Devices Changed:" + event.type;
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:HGroup width="100%">
+		<s:Button width="50%" label="toggle led 0 on Device 0" click="clickHandler(event)"/>
+		<s:Button width="50%" label="flash led 0 on Device 0" click="flashLeds(event)"/>
+			</s:HGroup>
+	<s:HGroup width="100%">
+		<s:Button width="50%" label="get devicePath Device 0" click="getDevicePath(event)"/>
+		<s:Button width="50%" label="get serialNumer Device 0" click="getSerial(event)"/>
+	</s:HGroup>
+	<s:HGroup width="100%">
+		<s:Button width="50%" label="get vendorName Device 0" click="getVendor(event)"/>
+		<s:Button width="50%" label="get productName Device 0" click="getProduct(event)"/>
+	</s:HGroup>
+	<s:HGroup width="100%">
+		<s:Button width="50%" label="get deviceType Device 0" click="deviceHandler(event)"/>
+	</s:HGroup>
+	<s:TextInput id="outputField" width="100%"/>
+</s:WindowedApplication>
