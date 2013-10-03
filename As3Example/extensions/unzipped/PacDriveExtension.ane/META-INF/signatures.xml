@@ -1,0 +1,45 @@
+<signatures>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="PackageSignature">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+      <SignatureMethod Algorithm="http://www.w3.org/TR/xmldsig-core#rsa-sha1"/>
+      <Reference URI="#PackageContents">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <DigestValue>v1fx4Ct6pY7Y1x2uo6eMDvYjbwF9GQgMhXXsyQCWbG0=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue Id="PackageSignatureValue">PGBhuvSyjHLGGyLIaGT3YTdd8YHnn3x/uYK/m7Htd4WlN3JZ/WiXtdNbj78G4bz9NU1PUW+gDTlz
+OeqPVSLO+Tf+mp8d1cAfsUkw++XinwRQbaork3K34VsWxe7c7jQRJAIZd/aVE72UTeLs0xGP6GYv
+EMRpcBHwGpmEWjJpz/h5qmNu8CcjeuDfON7QD9huUpqA/IsO4/4t09euIjI7MLm1FPFnqhL/eHqO
+hxF1+fE0bGlW2ngTt9xTwYkAz7SQ591XjikPlWK1o3bSe/+gmVRp0+ZwC/C00P9jgotVvJCnR/Zz
+S/3KibK1oH7Fxl3hYO2ClSjsAwtmgXtpxt/oVg==</SignatureValue>
+    <KeyInfo>
+      <X509Data>
+        <X509Certificate>MIIDMTCCAhmgAwIBAgIaNmNkZGFiYzE6MTQxNTAxY2NiZDc6LTgwMDAwDQYJKoZIhvcNAQEFBQAw
+QzELMAkGA1UEBhMCVVMxFDASBgNVBAoTC0dlcGF0dG8sIG5sMQswCQYDVQQLEwJOTDERMA8GA1UE
+AxMIU2VsZlNpZ24wHhcNMTMwOTIzMTMxNjA2WhcNMTgwOTI0MTMxNjA2WjBDMQswCQYDVQQGEwJV
+UzEUMBIGA1UEChMLR2VwYXR0bywgbmwxCzAJBgNVBAsTAk5MMREwDwYDVQQDEwhTZWxmU2lnbjCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMJIYNTcMSJ8qpAuGpuXGjhFoaQc4gK/8xgp
+x0G0qNzSwp93OYC3NmghXpD16fZbJCRADe27RoFYqGGjoQCGebeeeeCY2IhtL4XSanokCQuaRKfF
+VuWy2j+MDuq+BEI/T3AM6feg3Rc2gU1E8qjqr/EddU25uIJKkME8VhzRESt8z7zHYlC7+jPUPIJX
+yjNMZC5db/2x8HT6T9rsNOjDJ+KszoTQL380BBA5fgdsZx72zUVpq2sEXGTLzv2Paikpjlpc9fwZ
+NqsPX3OKg2mRJDoOhby8MAuhdjX3AOh66gRsIb6TYleC3fAhc0pJmbmhldyzDICHBftarG3UMkLm
+/RkCAwEAAaMXMBUwEwYDVR0lBAwwCgYIKwYBBQUHAwMwDQYJKoZIhvcNAQEFBQADggEBAA9yfIqB
+gnMZoCEYFkCpOTixRQjW5brrhO8LxVrnAOFe/mpuz/0JbgAYHSiJ5YghTRxmTHoqEFa9pDaSDv0o
+4LR3lS46BJ5bJ2lLRArxsy7cLuPKgMTCogOtcnzqBIw8eO/2BvUln4cHRIRpRVjNBdUaxohQ62fs
+wDubneyAeC1pTLfNTJPOYREqQPeivR8aCtaezmKPW7Vh0JvA7gaSBX+TJu0WvuyywhG6fbK/c3dw
+HE+egyRUh135lmmiPWDW/kZ2UKTatHdoxuEshCuVh73R92jmq/wq4zuYkQdn4gOQgxtIneEP9x4U
+NyVyVcQLlUAP58LzpZafY7ZU3GucivI=</X509Certificate>
+      </X509Data>
+    </KeyInfo>
+    <Object>
+      <Manifest Id="PackageContents">
+        <Reference URI="mimetype"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>QfjPqwYNSozTaKi3Ar1Veog4uaFk5DPieQA0v9uRJdY=</DigestValue></Reference><Reference URI="META-INF/ANE/extension.xml"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>1o6cx6QAwpXzEvHEbKmyRTEkoY8/lNedNJHzrl4l0qc=</DigestValue></Reference><Reference URI="catalog.xml"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>2mgOR4wY3dh2I8QXm52FXO7uRH/oMPWMzf1iO+PUGUw=</DigestValue></Reference><Reference URI="library.swf"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>NQVJF1lGZIrrLhoE6wcuXWKH9bkd5TOLCiHdf2RqGP0=</DigestValue></Reference><Reference URI="META-INF/ANE/Windows-x86/library.swf"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>NQVJF1lGZIrrLhoE6wcuXWKH9bkd5TOLCiHdf2RqGP0=</DigestValue></Reference><Reference URI="META-INF/ANE/Windows-x86/PacDrive.dll"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>FtGJV4QeA7HdYHjiqk8M1VolIgRcZi3eZVneNDrYUgA=</DigestValue></Reference><Reference URI="META-INF/ANE/Windows-x86/PacDriveNativeExtension.dll"><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod><DigestValue>3Npklb935eVV4Fjfqdxxl7aWqsWZSmMclNbBaswhILA=</DigestValue></Reference>
+      </Manifest>
+    </Object>
+    
+  </Signature>
+</signatures>

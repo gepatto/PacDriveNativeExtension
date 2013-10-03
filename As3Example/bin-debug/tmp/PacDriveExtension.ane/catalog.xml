@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_ce39ff2f4cc29ad6dcc029dd8d589c5c82d10db72bf0f10b57c59d96444a2fc2_flash_display_Sprite" mod="1380810326931" signatureChecksum="306609281" >
+        <def id="_ce39ff2f4cc29ad6dcc029dd8d589c5c82d10db72bf0f10b57c59d96444a2fc2_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="nl/gepatto/ane/PacDriveExtension" mod="1380032147844" signatureChecksum="1591915853" >
+        <def id="nl.gepatto.ane:PacDriveExtension" /> 
+        <dep id="trace" type="e" /> 
+        <dep id="nl.gepatto.ane:PacDriveEvent" type="e" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="Error" type="e" /> 
+        <dep id="nl.gepatto.ane:PacDriveEvent" type="s" /> 
+        <dep id="flash.events:StatusEvent" type="s" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="Error" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <script name="nl/gepatto/ane/PacDriveEvent" mod="1380032150761" signatureChecksum="2863290347" >
+        <def id="nl.gepatto.ane:PacDriveEvent" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:Event" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="350549175946648aeb2e1a04eb072e5d6287f5b91de5338b0a21dd7f646a18fd"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>
